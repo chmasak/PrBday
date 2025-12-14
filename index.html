@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Prattay — The Journey</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- 🔐 Agent Verification Overlay -->
+<div id="agentOverlay">
+  <div class="agent-card">
+    <h2>AGENT ACCESS PORTAL</h2>
+    <p class="sub">RESTRICTED AREA — AUTHORIZATION REQUIRED ((ALL CAPS) Last letter of your name + Your birth month in digits + First 3 letter of your surname)</p>
+    <input type="password" id="agentCode" placeholder="Enter passcode..." />
+    <button id="verifyBtn">VERIFY</button>
+    <p id="verifyMsg"></p>
+  </div>
+</div>
+
+
+
+  <main class="app">
+    <header class="topbar">
+      <div class="left">
+        <div class="brand">M3<span>CS</span></div>
+        <div class="heading">Let's start the journey, Prattay 🚗💨</div>
+      </div>
+
+      <div class="controls">
+        <button id="startEngine" class="btn primary">Start Engine</button>
+        <button id="driveNext" class="btn" disabled>Drive → Next Stop</button>
+        <button id="rev" class="btn">Rev</button>
+        <button id="confettiBtn" class="btn">Confetti</button>
+        <button id="partyBtn" class="btn party">Party Mode</button>
+        <button id="secretBtn" class="btn secret" disabled>Secret Message 🔒</button>
+        <button id="musicToggle" class="btn">Play / Pause Music</button>
+        <button id="gameBtn" class="btn">Catch the Cake 🎂</button>
+        <button id="missionBtn" class="btn">🎯 Secret Mission</button>
+        <button id="hackBtn" class="btn">Do NOT click this</button>
+<button id="wheelBtn" class="btn">Spin the Wheel 🎡</button>
+
+
+      </div>
+    </header>
+
+    <section class="content">
+      <aside class="hud">
+        <div class="speedo-card">
+          <svg viewBox="0 0 200 120" class="speedo">
+            <defs>
+              <linearGradient id="g1" x1="0" x2="1"><stop offset="0%" stop-color="#00fff0"/><stop offset="100%" stop-color="#00b7f0"/></linearGradient>
+            </defs>
+            <path d="M10,110 A90,90 0 0,1 190,110" fill="none" stroke="#111" stroke-width="14"/>
+            <g id="needle" transform="rotate(-90 100 110)">
+              <rect x="98" y="20" width="4" height="88" rx="2" fill="url(#g1)"/>
+              <circle cx="100" cy="110" r="6" fill="#00fff0"/>
+            </g>
+            <text x="100" y="70" text-anchor="middle" class="gauge-center">0</text>
+          </svg>
+          <div class="speed-text"><span id="speedNum">0</span> km/h</div>
+        </div>
+
+        <div class="stops-card">
+          <h4>Stops</h4>
+          <ol id="stopsList" class="stopsList">
+            <!-- Keep these stops; edit data-img / data-title / data-text to customise -->
+            <li class="stop" data-title="24 Dec, 2022, Our first selfie together" data-img="images/one.jpg" data-text="Remember the day? It was your b'day that day too, unexpected but surprising ig!! Slowly creeping out of our house to meet! lol it was fun,but yeah ignore the whole awkward distance between us haha!!">1</li>
+            
+            <li class="stop" data-title="First long walk!? school to station!!" data-img="images/two.jpg" data-text="Damn this was crazy, good for the bonding, right, definitely made Aadi very sus btw but who cares?">2</li>
+            
+            <li class="stop" data-title="A shared token of the bond!" data-img="images/three.jpeg" data-text="Our first trip out, the sweaty sweaty tour of Indian Museum and a lot of quality time together, them the rings. Ik you may get sad bcos of the later consequence, but dude keep the good memories, we got it together, and the bond remained, rather got stronger even if the thing doesnt exist, we do!!">3</li>
+            
+            <li class="stop" data-title="The best holi" data-img="images/four.jpeg" data-text="Remember when my dad took me to godrej, only to spend holi with you, even if it was for 30 min. That was purely because my dad admired you, he still does ik, because of who you are, a gem of a person.">4</li>
+            
+            <li class="stop" data-title="The pic that is still hidden in my mom's phone, lol" data-img="images/five.jpeg" data-text="That last day of class 11's exam, the day that summed up the best time of class 11, the newly found friendship which felt very well known, the whole lot of coincidences and awkward eye contacts!">5</li>
+            
+            <li class="stop" data-title="The confession which went very well" data-img="images/six.jpg" data-text="The best deep conversation we had after a long rough time together. I am really sorry for what happened, the distance between us, i still regret it. But our bond revamped to be better than ever after that, especially after the confession. Thank you so much, i can't even imagine not having you close to me, as someone i can completely rely on after my parents">6</li>
+            
+            <li class="stop" data-title="Shashti virtual twinning" data-img="images/seven.jpg" data-text="I don't have words to explain how you gave me a lot of relief during this durga pujo when i was so homesick rather pujosick, from all the pics of Maa to our virtual twinning, this pujo was very special because of you.">7</li>
+            
+            <li class="stop" data-title="Bicep curl" data-img="images/eight.jpg" data-text="If not Durga Pujo, then why not Kali Pujo together? More than Kali Pujo but my birthday too was special because of you, i am so grateful to you. And also that bicep curl, ig it made you happy too, then the merry go round, baapre but we did enjoy a lot!">8</li>
+            
+            <li class="stop" data-title="The craziest day out fr" data-img="images/nine.jpg" data-text="From setting a full proof plan to actually executing it and a lot more haha. The cemetery visit, then cab to Durga Museum, then exploring the place and a different version of pandal hopping without pandal or durga pujo, lol. Then came the highlight at godrej, from u safely driving us to the basement(btw u are excellent at driving) the making a peg, savouring JD(which we have been waiting for so long), and ahem the kiss and kinda cuddle, it was damn amazing, dude i m still blushing, a top secret between us...nvm nothing happened right!? it was consentual and we are adults. Basically that was the best day out ever, the best time we did spend together.">9</li>
+            
+            <li class="stop" data-title="Distance? Who cares!" data-img="images/tog.jpg" data-text="Yup, it is true distance doesn't matter becase we are close emotionally, different city or different country, it doesn't matter! But ha maza to aaya haina!?">9</li>
+
+            <li class="stop" data-title="To my dearest," data-img="images/ten.jpg" data-text="Happy 20th birthday, Prattay! Thank you for coming into my life and making it special, you really mean a lot to me and I am really happy and proud to have you. As someone who understands me and i can share everything with without being judged, for taking care of me and for being there for me with me. I promise to be there with you and for you all the time, I don't know how much i can contribute to you like you do for me but i do try and will try my level best. Remember you always have me. I am really proud of you, and of who you have become, like you have been through a lot and have stood there with full strength, facing all the situations, i am so proud of you and am really inspired by you. Just stay like this, you ARE the BEST, remember it. Just cherish your life and keep smiling my cutie, ily!!!! Sending virtual hugs and warm wishes!! Happy Birthday!!!">10</li>
+          </ol>
+          <div class="hint"><li class="stop"></div>
+        </div>
+      </aside>
+
+      <section class="stage-wrap">
+        <div class="status" id="status">Parked — press <strong>Start Engine</strong></div>
+
+        <div class="stage">
+          <canvas id="road" class="road"></canvas>
+          <img id="car" class="car" src="images/car.png" alt="car" draggable="false" />
+        </div>
+
+        <div id="popup" class="popup hidden" role="dialog">
+          <div class="card">
+            <h3 id="popupTitle"></h3>
+            <img id="popupImg" src="" alt="" />
+            <p id="popupText"></p>
+            <div class="popup-actions">
+              <button id="popupNext" class="btn">Next ▶</button>
+              <button id="popupClose" class="btn">Close</button>
+            </div>
+          </div>
+        </div>
+
+          
+
+
+      </section>
+    </section>
+
+    <section id="gameSection" class="hidden">
+  <canvas id="gameCanvas"></canvas>
+  <div id="gameOverlay" class="overlay hidden">
+    <h2 id="gameMessage"></h2>
+    <button id="gameClose" class="btn">Back to Journey</button>
+  </div>
+</section>
+
+
+    <footer class="footer">Made with ❤️ — for my one and only</footer>
+
+    <!-- audio -->
+    <audio id="bgMusic" src="musics/song.mp3" preload="auto"></audio>
+    <audio id="revSound" src="musics/engine.mp3" preload="auto"></audio>
+<audio id="partyMusic" src="musics/party.mp3" preload="auto"></audio>
+
+
+  </main>
+
+<!-- ✅ Correct Secret Mission structure -->
+<div id="missionGame" class="hidden" aria-hidden="true">
+  <div id="missionContainer">
+    <canvas id="missionCanvas" width="800" height="500"></canvas>
+    <button id="exitMission" class="btn">Exit Mission</button>
+  </div>
+</div>
+
+<!-- paste before confetti canvas / script -->
+<!-- Hacking simulator overlay -->
+<div id="hackOverlay" class="overlay hidden" aria-hidden="true">
+  <div class="hack-card">
+    
+    <div id="hackTerminal" class="terminal"></div>
+
+    <!-- ⭐ ADD THIS BLOCK -->
+    <img id="hackImage" class="hidden hack-img" src="images/fun.jpg" alt="">
+    <p id="hackMsg" class="hidden hack-msg"></p>
+    <!-- ⭐ END -->
+
+    <div class="hack-controls">
+      <button id="hackClose" class="btn">Close</button>
+    </div>
+    
+  </div>
+</div>
+
+
+
+
+<!-- Spin wheel overlay -->
+<div id="wheelOverlay" class="overlay hidden" aria-hidden="true">
+  <div class="wheel-card">
+    <canvas id="wheelCanvas" width="420" height="420"></canvas>
+    <div class="wheel-controls">
+      <button id="spinBtn" class="btn primary">SPIN</button>
+      <button id="wheelClose" class="btn">Close</button>
+    </div>
+    <div id="wheelResult" class="wheel-result"></div>
+  </div>
+</div>
+  <audio id="hackSound" src="musics/hack.mp3"></audio>
+
+
+<canvas id="confetti" class="confetti"></canvas>
+  <script src="script.js"></script>
+
+
+ 
+
+</body>
+</html>
+
